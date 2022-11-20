@@ -13,7 +13,7 @@ export default function Stories() {
   return (
     <ul class="cx-stories">
       <ion-icon class="sumir" name="chevron-forward-circle"></ion-icon>
-      {dados.map((s) => <Storie key={s.nome} imagem={s.imagem} nome={s.nome} />)}
+      {dados.map((s) => <Storie key={s.index} imagem={s.imagem} nome={s.nome} />)}
     </ul>
   )
 
