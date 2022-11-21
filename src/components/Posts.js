@@ -20,9 +20,10 @@ function Post(props) {
 
   const [curtiu, setCurtiu] = useState("heart-outline")
   const [salvar, setSalvar] = useState("bookmark-outline")
+  const [cor, setCor] = useState("like")
 
   return (
-    <div class="post">
+    <div data-test="post" class="post">
       <div class="cabeçalho">
         <div class="c-esquerda">
           <img src={props.perfil} />
@@ -33,23 +34,23 @@ function Post(props) {
         </div>
       </div>
       <div class="foto-post">
-        <img onClick={ () => curtiu === "heart-outline" ? setCurtiu("heart") : ""} src={props.post} />
+        <img data-test="post-image" onClick={ () => curtiu === "heart-outline" ? setCurtiu("heart") : ""} src={props.post} />
       </div>
       <div class="rodape">
         <div class="cx-1">
           <div class="r-esquerda">
-            <ion-icon onClick={ () => curtiu === "heart-outline" ? setCurtiu("heart") : setCurtiu("heart-outline")} name={curtiu}></ion-icon>
+            <ion-icon data-test="like-post" onClick={ () => curtiu === "heart-outline" ? setCurtiu("heart") : setCurtiu("heart-outline")} name={curtiu}></ion-icon>
             <ion-icon name="chatbubble-outline"></ion-icon>
             <ion-icon name="paper-plane-outline"></ion-icon>
           </div>
           <div class="r-direita">
-            <ion-icon onClick={ () => salvar === "bookmark-outline" ? setSalvar("bookmark") : setSalvar("bookmark-outline")} name={salvar}></ion-icon>
+            <ion-icon data-test="save-post" onClick={ () => salvar === "bookmark-outline" ? setSalvar("bookmark") : setSalvar("bookmark-outline")} name={salvar}></ion-icon>
           </div>
         </div>
         <div class="cx-2">
           <div class="img-txt">
             <img src={props.curtiu} />
-            <p>Curtido por <strong>{props.por}</strong> e <strong>outras {curtiu === "heart" ? Number(props.curtidas) + 1 : (props.curtidas) }</strong> pessoas </p>
+            <p data-test="likes-number">Curtido por <strong>{props.por}</strong> e <strong>outras {curtiu === "heart" ? Number(props.curtidas) + 1 : (props.curtidas) }</strong> pessoas </p>
           </div>
         </div>
       </div>

@@ -194,6 +194,10 @@ body {
   color: red;
 }
 
+.nolike{
+  color: black;
+}
+
 .r-direita {
   padding-right: 17px;
 }

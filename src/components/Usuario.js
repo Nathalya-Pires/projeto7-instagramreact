@@ -9,13 +9,13 @@ export default function Usuario() {
   const [user, setUser] = useState(userPadrao)
 
   return (
-    <div class="usuario">
-      <img onClick={() => setImagem(prompt("Insira o link da nova imagem"))} src={!imagem ? fotoPadrao : imagem} />
+    <div data-test="user" class="usuario">
+      <img data-test="profile-image" onClick={() => setImagem(prompt("Insira o link da nova imagem"))} src={!imagem ? fotoPadrao : imagem} />
       <div class="user">
         <h1>nathyohana1</h1>
         <div className="pencil">
-          <h2>{!user ? userPadrao : user}</h2>
-          <ion-icon name="pencil-outline" onClick={() => setUser(prompt("Digite seu novo usuário"))} ></ion-icon>
+          <h2 data-test="name">{!user ? userPadrao : user}</h2>
+          <ion-icon data-test="edit-name" name="pencil-outline" onClick={() => setUser(prompt("Digite seu novo usuário"))} ></ion-icon>
         </div>
       </div>
     </div>
