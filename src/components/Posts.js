@@ -33,7 +33,7 @@ function Post(props) {
         </div>
       </div>
       <div className="foto-post">
-        <img data-test="post-image" onClick={() => curtiu === false ? setCurtiu(true) : ""} src={props.post} />
+        <img data-test="post-image" onDoubleClick={() => curtiu === false ? setCurtiu(true) : ""} src={props.post} />
       </div>
       <div className="rodape">
         <div className="cx-1">
