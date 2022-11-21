@@ -190,6 +190,10 @@ body {
   padding: 0px 5px 0px 0px;
 }
 
+.like{
+  color: red;
+}
+
 .r-direita {
   padding-right: 17px;
 }
@@ -218,10 +222,6 @@ body {
 
 .post {
   margin-bottom: 25px;
-}
-
-video {
-  width: 100%;
 }
 
 .desktop-corpo {
