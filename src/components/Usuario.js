@@ -9,9 +9,9 @@ export default function Usuario() {
   const [user, setUser] = useState(userPadrao)
 
   return (
-    <div data-test="user" class="usuario">
+    <div data-test="user" className="usuario">
       <img data-test="profile-image" onClick={() => setImagem(prompt("Insira o link da nova imagem"))} src={!imagem ? fotoPadrao : imagem} />
-      <div class="user">
+      <div className="user">
         <h1>nathyohana1</h1>
         <div className="pencil">
           <h2 data-test="name">{!user ? userPadrao : user}</h2>

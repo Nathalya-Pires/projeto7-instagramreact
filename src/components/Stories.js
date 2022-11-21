@@ -11,8 +11,8 @@ export default function Stories() {
   ]
 
   return (
-    <ul class="cx-stories">
-      <ion-icon class="sumir" name="chevron-forward-circle"></ion-icon>
+    <ul className="cx-stories">
+      <ion-icon className="sumir" name="chevron-forward-circle"></ion-icon>
       {dados.map((s) => <Storie key={s.index} imagem={s.imagem} nome={s.nome} />)}
     </ul>
   )
@@ -21,12 +21,12 @@ export default function Stories() {
 
 function Storie(props) {
   return (
-    <li class="story">
+    <li className="story">
       <img src="./assets/stories_background.jpg" />
-      <div class="foto">
+      <div className="foto">
         <img src={props.imagem} />
       </div>
-      <div class="nome">
+      <div className="nome">
         {props.nome}
       </div>
     </li>

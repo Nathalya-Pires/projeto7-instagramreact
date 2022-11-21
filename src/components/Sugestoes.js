@@ -9,8 +9,8 @@ export default function Sugestoes() {
   ]
 
   return (
-    <div class="sugestoes">
-      <div class="sg">
+    <div className="sugestoes">
+      <div className="sg">
         <h1>Sugestões para você</h1>
         <h2>Ver tudo</h2>
       </div>
@@ -23,15 +23,15 @@ export default function Sugestoes() {
 
 function Sugestao(props) {
   return (
-    <div class="cx-sugestoes">
-    <div class="box">
+    <div className="cx-sugestoes">
+    <div className="box">
       <img src={props.foto} />
-      <div class="txt">
+      <div className="txt">
         <h1>{props.usuario}</h1>
         <h2>{props.status}</h2>
       </div>
     </div>
-    <div class="seguir">
+    <div className="seguir">
       <h1>Seguir</h1>
     </div>
   </div>
